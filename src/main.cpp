@@ -20,10 +20,9 @@ void setup() {
   pinMode(RELAY_1, OUTPUT);
   pinMode(RELAY_2, OUTPUT);
 
-  
+  keepAlive = 0;
   floatSwitch.update();
   int floatSwitchInput = floatSwitch.read();
-  keepAlive = floatSwitchInput;
   digitalWrite(LED, floatSwitchInput);
   digitalWrite(RELAY_1, floatSwitchInput);
   digitalWrite(RELAY_2, floatSwitchInput);
